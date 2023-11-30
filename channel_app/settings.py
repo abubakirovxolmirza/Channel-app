@@ -76,11 +76,8 @@ WSGI_APPLICATION = 'channel_app.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'channel_app',
-        'USER': 'postgres',
-        'PASSWORD': 'nodir12.',
-        'HOST': 'localhost',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
