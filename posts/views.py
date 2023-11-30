@@ -5,3 +5,4 @@ from . import models
 
 def index(request):
     return render(request, 'posts/index.html', {'postlar': models.post.objects.all()})
+
