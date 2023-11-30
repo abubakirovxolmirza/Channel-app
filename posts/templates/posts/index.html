@@ -1,0 +1,17 @@
+{% extends 'posts/base.html' %}
+{% block heading %}
+    <title>Home</title>
+{% endblock heading %}
+
+{% block content %}
+    {% for i in postlar %}
+        <article class="card">
+            <img src="/media/{{ i.post_image }}"/>
+            <div class="container">
+              <h1>{{ i.post_header }}</h1>
+              <p>{{ i.post_content }}</p>
+              <span>{{ i.post_date|date:"Y-m-d H:i" }}</span>
+            </div>
+          </article>
+    {% endfor %}
+{% endblock content %}
