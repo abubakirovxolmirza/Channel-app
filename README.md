@@ -1,4 +1,6 @@
 # Channel App
+   ![img3](posts/media/readme_photos/home_page.png)
+
 
 Channel App deb nomlangan ushbu Django loyihasi postlar yozishga mo'ljallangan
 - [Docker o'rnatish](#docker)
@@ -12,6 +14,7 @@ Channel App deb nomlangan ushbu Django loyihasi postlar yozishga mo'ljallangan
    Sizda qanday OS bo'lsa https://www.docker.com/products/docker-desktop/ bu linkga kirib OS in tanlab yuklab oling
 
 2. **Terminal code orqali yuklash**
+   
    Macos uchun
    ```bash
    sudo hdiutil attach Docker.dmg
@@ -39,14 +42,13 @@ Channel App deb nomlangan ushbu Django loyihasi postlar yozishga mo'ljallangan
    ```bash
    docker build -t posts:1.0 .
    ```
-   
-   https://github.com/abubakirovxolmirza/Channel-app/posts/media/readme_photos/docker.jpg
+   ![img2](posts/media/readme_photos/docker.png)
 
 
 ## Malumotlar bazasi
 
    1. O'zingizga kerakli SQL so'rov tilini tanlab unga ma'lumotlaringizni kirgazing
-   https://github.com/abubakirovxolmirza/Channel-app/posts/media/readme_photos/database.jpg
+   ![img1](posts/media/readme_photos/database.png)
 
    Malumotlarni kirgazganingizdan keyin esa virtualenvga o'ting va malumotlaringizni saqlang.
    ```bash
