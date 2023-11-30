@@ -1,17 +1,69 @@
 # Channel App
 
 Channel App deb nomlangan ushbu Django loyihasi postlar yozishga mo'ljallangan
-
+- [Docker o'rnatish](#docker)
 - [O'rnatish](#o'rnatish)
+- [Malumotlar bazasi](#psql)
 - [Run](#run)
 
-## O'rnatish, run qilish
+## Docker o'rnatish
 
-To run this project locally, follow these steps:
+1. **Dockerni yuklash**
+   Sizda qanday OS bo'lsa https://www.docker.com/products/docker-desktop/ bu linkga kirib OS in tanlab yuklab oling
 
-1. **Clone the repository:**
+2. **Terminal code orqali yuklash**
+   Macos uchun
    ```bash
-   git clone https://github.com/abubakirovxolmirza/Channel_app/
+   sudo hdiutil attach Docker.dmg
+   sudo /Volumes/Docker/Docker.app/Contents/MacOS/install
+   sudo hdiutil detach /Volumes/Docker
+   ```
+   Windows uchun
+   ```bash
+   choco install docker-desktop
+   ```
+   Linux uchun
+   ```bash
+   sudo apt-get update
+   sudo apt-get install ./docker-desktop-<version>-<arch>.deb   
+   ```
+   Endi esa https://hub.docker.com/_/python shu linkdan python image ni yuklab oling
+## O'rnatish
 
+1. **Clone qilish**
+   ```bash
+   git clone https://github.com/abubakirovxolmirza/Channel_app
+
+
+2. **Docker orqali packetlar o'rnatish**
+   ```bash
+   docker build -t posts:1.0 .
+   ```
+   
+   https://github.com/abubakirovxolmirza/Channel-app/posts/media/readme_photos/docker.jpg
+
+
+## Malumotlar bazasi
+
+   1. O'zingizga kerakli SQL so'rov tilini tanlab unga ma'lumotlaringizni kirgazing
+   https://github.com/abubakirovxolmirza/Channel-app/posts/media/readme_photos/database.jpg
+
+   Malumotlarni kirgazganingizdan keyin esa virtualenvga o'ting va malumotlaringizni saqlang.
+   ```bash
+   pipenv shell
+   python manage.py makemigrations
+   python manage.py migrate
+   ```
+
+## Run qilish
+   1. Super User yaratib oling avvalo
+   ```bash
+   python manage.py createsuperuser
+   ```
+   2. Run qilish
+   ```bash
    python manage.py runserver
-
+   ```
+   Admin pagega o'tib post qo'shing va postlaringizni ko'rib zavqlaning
+   
+   
